@@ -6,8 +6,8 @@ module.exports = async (req, res, next) => {
     req.isLoggedIn = true;
   } else {
     console.log("Not Logged In");
-    res.redirect("/profile");
     req.isLoggedIn = false;
+    res.redirect("/login-student");
   }
   next();
 };

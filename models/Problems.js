@@ -17,6 +17,9 @@ const userSchema = new mongoose.Schema({
       type: String,
     },
   ],
+  description: {
+    type: String,
+  },
   approved: {
     type: String,
   },

@@ -147,6 +147,7 @@ const postRequirement = async (req, res, next) => {
   try {
     const user = new Problem({
       name: req.body.name,
+      description: req.body.description,
       by: req.session.user.firstName,
       hours: req.body.hours,
     });
@@ -302,4 +303,5 @@ module.exports = {
   registerVolunteer,
   loginStudent,
   loginVolunteer,
+  postRequirement,
 };
