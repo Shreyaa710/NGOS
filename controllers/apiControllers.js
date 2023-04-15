@@ -142,6 +142,23 @@ const registerVolunteer = async (req, res, next) => {
     res.status(400).send("Error");
   }
 };
+const postRequirement = async (req, res, next) => {
+  console.log("Hi");
+  try {
+    const user = new Problem({
+      name: req.body.name,
+      by: req.session.user.firstName,
+      hours: req.body.hours,
+    });
+    // await sendMail(req.body.email);
+    const token = await user.generateAuthToken();
+    await user.save();
+    return res.redirect("/");
+  } catch (err) {
+    console.log(err.message);
+    res.status(400).send("Error");
+  }
+};
 
 const loginStudent = async (req, res, next) => {
   console.log("Loginp : \n", req.session.currentUser);

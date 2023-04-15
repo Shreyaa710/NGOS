@@ -4,9 +4,9 @@ module.exports = async (req, res, next) => {
   if (req.session.user) {
     console.log("Logged In");
     req.isLoggedIn = true;
-    res.redirect("/profile");
   } else {
     console.log("Not Logged In");
+    res.redirect("/profile");
     req.isLoggedIn = false;
   }
   next();
