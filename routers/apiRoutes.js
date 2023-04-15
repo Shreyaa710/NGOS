@@ -8,5 +8,6 @@ router.post("/registerVolunteer", apiControllers.registerVolunteer);
 router.post("/loginStudent", apiControllers.loginStudent);
 router.post("/loginVolunteer", apiControllers.loginVolunteer);
 router.post("/post", apiControllers.postRequirement);
+router.get("/getAllProblems", apiControllers.getAllProblems);
 
 module.exports = router;

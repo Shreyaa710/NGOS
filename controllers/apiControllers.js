@@ -176,7 +176,6 @@ const loginStudent = async (req, res, next) => {
     req.session.user = await user;
     // res.redirect("/profile");
     req.session.login = true;
-    console.log("hnji");
     return res.send(user);
   } catch (err) {
     // console.log(e);
@@ -203,6 +202,17 @@ const loginVolunteer = async (req, res, next) => {
   } catch (err) {
     // console.log(e);
     res.status(400).send({ error: err.message });
+  }
+};
+const getAllProblems = async (req, res) => {
+  try {
+    const users = await Problem.find({});
+    console.log(users);
+    let user = [];
+    console.log("han han", users);
+    res.send(users);
+  } catch {
+    res.status(404).render("404.ejs");
   }
 };
 // const logout = async (req, res, next) => {
@@ -304,4 +314,5 @@ module.exports = {
   loginStudent,
   loginVolunteer,
   postRequirement,
+  getAllProblems,
 };
