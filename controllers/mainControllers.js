@@ -19,6 +19,15 @@ const studentDash = (req, res) => {
 const postRequirement = (req, res) => {
   res.render("postRequirement");
 };
+const applicant = (req, res) => {
+  res.render("applicantList");
+};
+const volunteerDash = (req, res) => {
+  res.render("volunteerDash");
+};
+const applyForm = (req, res) => {
+  res.render("applyForm");
+};
 
 module.exports = {
   registerVolunteer,
@@ -28,4 +37,7 @@ module.exports = {
   dashboard,
   studentDash,
   postRequirement,
+  applicant,
+  volunteerDash,
+  applyForm,
 };

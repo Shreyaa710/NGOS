@@ -1,6 +1,7 @@
 const Student = require("../models/Student");
 const Volunteer = require("../models/Volunteer");
 const Problem = require("../models/Problems");
+const Apply = require("../models/Apply");
 require("dotenv").config();
 
 const nodemailer = require("nodemailer");
@@ -149,6 +150,7 @@ const postRequirement = async (req, res, next) => {
       name: req.body.name,
       description: req.body.description,
       by: req.session.user.firstName,
+      email: req.session.user.email,
       hours: req.body.hours,
     });
     // await sendMail(req.body.email);
@@ -213,6 +215,23 @@ const getAllProblems = async (req, res) => {
     res.send(users);
   } catch {
     res.status(404).render("404.ejs");
+  }
+};
+const applyForm = async (req, res) => {
+  try {
+    const user = new Apply({
+      areyou: req.body.areyou,
+      whatwill: req.body.whatwill,
+      name: req.session.user.firstName,
+      email: req.session.user.email,
+    });
+    // await sendMail(req.body.email);
+    const token = await user.generateAuthToken();
+    await user.save();
+    return res.redirect("/dashboard");
+  } catch (err) {
+    console.log(err.message);
+    res.status(400).send("Error");
   }
 };
 // const logout = async (req, res, next) => {
@@ -315,4 +334,5 @@ module.exports = {
   loginVolunteer,
   postRequirement,
   getAllProblems,
+  applyForm,
 };

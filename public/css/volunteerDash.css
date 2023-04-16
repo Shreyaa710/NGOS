@@ -47,11 +47,12 @@ html {
 
 .dashboard-btn:nth-child(1) {
   border-top-left-radius: 2rem;
+  transition: all 0.2s;
 }
 
-/* .dashboard-btn:nth-child(1):hover {
-    background-color: #444;
-  } */
+.dashboard-btn:nth-child(1):hover {
+  background-color: #444;
+}
 
 .dashboard-btn:last-child {
   border-top-right-radius: 2rem;
@@ -61,13 +62,6 @@ html {
 .activ {
   background-color: #333;
   color: #fff;
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-  transition: all 0.2s;
-}
-
-.activ:hover {
-  background-color: #444;
 }
 
 .image-dash {
@@ -112,18 +106,16 @@ html {
 }
 
 .para-more {
-  width: 95%;
+  width: 85%;
 }
 
 .btn-dash {
-  padding: 1rem 2rem;
+  padding: 1rem 2.4rem;
   color: #fff;
   background-color: #333;
   border-radius: 2rem;
   cursor: pointer;
   transition: all 0.2s;
-  border: none;
-  min-width: 10rem;
 }
 
 .btn-dash:hover {
@@ -134,7 +126,41 @@ html {
   margin-top: 4rem;
 }
 
-.btn-cancel {
-  background-color: #ccc !important;
-  color: #333;
+.top-class {
+  display: flex;
+  justify-content: space-between;
+  width: 120rem;
+  margin: 0 auto;
+}
+
+.time-dash {
+  font-size: 1.6rem;
+}
+
+.happy-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.happy-gnda {
+  display: flex;
+  justify-content: center;
+}
+
+.amount-dash {
+  font-weight: 700;
+}
+
+.happy-bread {
+  justify-self: center;
+  align-self: center;
+}
+
+.dash-texting {
+  font-size: 1.6rem;
+}
+
+.amount-dash {
+  font-weight: 700;
 }

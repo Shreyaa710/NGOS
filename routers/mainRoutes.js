@@ -12,5 +12,8 @@ router.get("/login-student", mainControllers.loginStudent);
 router.get("/dashboard", mainControllers.dashboard);
 router.get("/studentDash", mainControllers.studentDash);
 router.get("/post", isLoggedIn, mainControllers.postRequirement);
+router.get("/applicant", isLoggedIn, mainControllers.applicant);
+router.get("/volunteerDash", isLoggedIn, mainControllers.applicant);
+router.get("/applyForm", isLoggedIn, mainControllers.applyForm);
 
 module.exports = router;

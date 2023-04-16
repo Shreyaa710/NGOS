@@ -1,6 +1,3 @@
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-
 console.log("hello");
 
 let url;
@@ -10,6 +7,7 @@ if (a.includes("academer")) {
 } else {
   url = "http://localhost:3000";
 }
+
 const fetchData = async (email, password) => {
   try {
     console.log("email: ", email, "\npassword: ", password);
@@ -23,9 +21,9 @@ const fetchData = async (email, password) => {
     data.forEach((i) => {
       document.querySelector(".mainc").insertAdjacentHTML(
         "beforeend",
-        `<div class="dashboard-box">
-            <div class="contain-box">
-            <div class="contain-dabba">
+        `      <div class="dashboard-box">
+        <div class="contain-box">
+          <div class="contain-dabba">
             <img
               src="WhatsApp Image 2023-04-10 at 21.34.12.jpg"
               alt="image"
@@ -36,20 +34,67 @@ const fetchData = async (email, password) => {
 
         <div class="contain-box">
           <p class="para-dash para-more">
-           ${i.description}
+            ${i.description}
           </p>
-          <button class="btn-dash">Done</button>
+          <a href="/applicant" class="btn-dash">Total Aplicants</a>
           <!-- <button class="btn-dash">Cancel</button> -->
-          </div>
-          
+        </div>
+
         <div class="contain-box">
-        <div class="flex-person">
-        <!-- <p class="para-dash">Posted on:</p>
-        <p class="para-dash">23/05/2023</p> -->
+          <div class="flex-person">
+          </div>
+          <p class="para-dash">Est time: 2hrs</p>
         </div>
-          <p class="para-dash">Est time: ${i.hours} hr</p>
+      </div>
+        `
+      );
+    });
+    return data;
+  } catch (error) {
+    console.log("issue with api");
+    // const error = await err.json();
+    // console.log(error.message);
+    return error;
+  }
+};
+const fetchData1 = async (email, password) => {
+  try {
+    console.log("email: ", email, "\npassword: ", password);
+    const res = await fetch(url + "/api/getAllProblems", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+    const data = await res.json();
+    console.log("klj", data);
+    // document.querySelector(".mains").innerHTML = "";
+    data.forEach((i) => {
+      document.querySelector(".mainc").insertAdjacentHTML(
+        "beforeend",
+        `      <div class="dashboard-box">
+        <div class="contain-box">
+          <div class="contain-dabba">
+            <img
+              src="WhatsApp Image 2023-04-10 at 21.34.12.jpg"
+              alt="image"
+              class="image-dash" />
+            <p class="text-dash">${i.name}</p>
+          </div>
         </div>
+
+        <div class="contain-box">
+          <p class="para-dash para-more">
+            ${i.description}
+          </p>
+          <a href="/applyForm" class="btn-dash">Apply</a>
+          <!-- <button class="btn-dash">Cancel</button> -->
         </div>
+
+        <div class="contain-box">
+          <div class="flex-person">
+          </div>
+          <p class="para-dash">Est time: 2hrs</p>
+        </div>
+      </div>
         `
       );
     });
@@ -62,7 +107,6 @@ const fetchData = async (email, password) => {
   }
 };
 
-const error = document.querySelector(".error");
 // console.log(bx);
 // document.querySelector(".loginbtn").addEventListener("click", async (el) => {
 //   el.preventDefault();
@@ -88,4 +132,8 @@ const error = document.querySelector(".error");
 //     window.location.href = "/";
 //   }
 // });
-console.log(fetchData());
+if (a.includes("dashboard")) {
+  console.log(fetchData1());
+} else {
+  console.log(fetchData());
+}

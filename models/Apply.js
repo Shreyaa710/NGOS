@@ -5,30 +5,18 @@ const validator = require("validator");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
-  name: {
+  areyou: {
     type: String,
     required: true,
   },
-  by: {
+  whatwill: {
+    type: String,
+  },
+  name: {
     type: String,
   },
   email: {
     type: String,
-  },
-  applied: [
-    {
-      type: String,
-    },
-  ],
-  description: {
-    type: String,
-  },
-  approved: {
-    type: String,
-  },
-
-  hours: {
-    type: Number,
   },
   token: {
     type: String,
@@ -68,6 +56,6 @@ userSchema.statics.findByCredentials = async (email, password) => {
   return user;
 };
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("Apply", userSchema);
 
 module.exports = User;
