@@ -15,5 +15,6 @@ router.get("/post", isLoggedIn, mainControllers.postRequirement);
 router.get("/applicant", isLoggedIn, mainControllers.applicant);
 router.get("/volunteerDash", isLoggedIn, mainControllers.applicant);
 router.get("/applyForm", isLoggedIn, mainControllers.applyForm);
+router.get("/withdraw", isLoggedIn, mainControllers.withdraw);
 
 module.exports = router;

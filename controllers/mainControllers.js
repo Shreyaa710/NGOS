@@ -28,6 +28,9 @@ const volunteerDash = (req, res) => {
 const applyForm = (req, res) => {
   res.render("applyForm");
 };
+const withdraw = (req, res) => {
+  res.render("withdraw");
+};
 
 module.exports = {
   registerVolunteer,
@@ -40,4 +43,5 @@ module.exports = {
   applicant,
   volunteerDash,
   applyForm,
+  withdraw,
 };

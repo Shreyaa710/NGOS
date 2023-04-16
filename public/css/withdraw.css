@@ -1,0 +1,95 @@
+/* -------01 TYPOGRAPHY SYSTEM
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "Poppins";
+  /* border: none; */
+  outline: none;
+}
+
+body {
+  width: 120rem;
+  height: 100vh;
+  margin: 0 auto;
+  color: #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.withdrawal-section {
+  padding: 2rem;
+  width: 54rem;
+  margin: 0 auto;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+}
+
+.withdrawal-heading {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: 600;
+
+  padding-bottom: 2rem;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+label {
+  font-size: 2rem;
+  font-weight: 500;
+
+  text-align: left;
+}
+
+.account-number,
+.confirm-account-number,
+.account-holder-name,
+.ifsc-code,
+.withdrawal-amount {
+  font-size: 1.6rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #333;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.withdrawal-amount {
+  margin-bottom: 0;
+}
+
+.available-balance {
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+}
+
+#submit-btn {
+  font-size: 1.4rem;
+  padding: 0.8rem 2rem;
+  border-radius: 2rem;
+  background-color: #333;
+  color: #f2f2f2;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+#submit-btn:hover {
+  background-color: #555;
+}
