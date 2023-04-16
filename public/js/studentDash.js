@@ -43,7 +43,7 @@ const fetchData = async (email, password) => {
         <div class="contain-box">
           <div class="flex-person">
           </div>
-          <p class="para-dash">Est time: 2hrs</p>
+          <p class="para-dash">Est time: ${i.hours}</p>
         </div>
       </div>
         `
