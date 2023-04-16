@@ -138,3 +138,22 @@ html {
   background-color: #ccc !important;
   color: #333;
 }
+.hoshiarpur {
+  position: fixed;
+  bottom: 2rem;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  /* background-color: #f1f1f1; */
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hoshiarpur ion-icon {
+  font-size: 6rem;
+  color: #333;
+}
