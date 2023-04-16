@@ -944,3 +944,12 @@ a {
   align-self: center;
   margin-top: 3rem;
 }
+
+.links {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
