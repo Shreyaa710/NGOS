@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/withdraw.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <section class="withdrawal-section">
+      <h1 class="withdrawal-heading">Enter Withdrawal Details</h1>
+      <form action="" class="form-container">
+        <label for="account-number">Enter Account Number :</label><br />
+        <input
+          type="number"
+          class="account-number"
+          maxlength="14"
+          placeholder="Account Number"
+          required
+        />
+        <br />
+
+        <label for="confirm-account-number">Re-enter Account Number :</label
+        ><br />
+        <input
+          type="number"
+          class="confirm-account-number"
+          maxlength="14"
+          placeholder="Confirm Account Number"
+          required
+        />
+        <br />
+
+        <label for="account-holder-name">Enter name :</label><br />
+        <input
+          type="text"
+          class="account-holder-name"
+          placeholder="Name"
+          required
+        />
+        <br />
+
+        <label for="ifsc-code">Enter IFSC Code :</label><br />
+        <input
+          type="text"
+          class="ifsc-code"
+          max="11"
+          min="9"
+          placeholder="Bank's IFSC Code"
+          required
+        />
+        <br />
+
+        <label for="withdrawal-amount">Enter Withdrawal Amount :</label><br />
+        <input
+          type="number"
+          class="withdrawal-amount"
+          placeholder="₹XXXX"
+          required
+        />
+        <br />
+
+        <p class="available-balance">Available Balance : ₹2316/-</p>
+
+        <input id="submit-btn" type="submit" content="Withdraw" />
+      </form>
+    </section>
+  </body>
+</html>
+
+<!-- Account number , confirm, ifsc, name , enter amount,available balance -->
